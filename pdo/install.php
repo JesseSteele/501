@@ -10,8 +10,8 @@
 // Redirect if already configured
 if (file_exists('./in.conf.php'))  {
 
-  // Include the file we know we have
-  require_once ('./in.conf.php');
+  // Include in.db.php, which includes the file we know we have
+  require_once ('./in.db.php');
 
   // Configured?
   if (((defined('DB_CONFIGURED')) && (DB_CONFIGURED == true)) && (isset($blog_web_base))) {
@@ -96,7 +96,8 @@ EOF;
       echo '<p>Could not create the database config file, quitting.</p>';
       exit ();
     } else {
-      require_once ('./in.conf.php');
+      // Include in.db.php, which includes the file we know we have
+      require_once ('./in.db.php');
     } // Now we have a database connection and we can begin making queries
 
     // Set the character settings in the database
@@ -263,7 +264,7 @@ EOF;
       `series_cat2` VARCHAR(255) DEFAULT NULL,
       `series_cat3` VARCHAR(255) DEFAULT NULL,
       `series_cat4` VARCHAR(255) DEFAULT NULL,
-      `series_cat5` VARCHAR(255) DEFAULT NULL
+      `series_cat5` VARCHAR(255) DEFAULT NULL,
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4";
     $statement = $database->query($query);
@@ -409,10 +410,10 @@ EOF;
 
     // Check proper user form submission
     if (
-      (isset($fullname)) && (! array_key_exists('fullname', $check_err))
-      (isset($username)) && (! array_key_exists('username', $check_err))
-      (isset($email)) && (! array_key_exists('email', $check_err))
-      (isset($favnumber)) && (! array_key_exists('favnumber', $check_err))
+      (isset($fullname)) && (! array_key_exists('fullname', $check_err)) &&
+      (isset($username)) && (! array_key_exists('username', $check_err)) &&
+      (isset($email)) && (! array_key_exists('email', $check_err)) &&
+      (isset($favnumber)) && (! array_key_exists('favnumber', $check_err)) &&
       (isset($password)) && (! array_key_exists('password', $check_err))
     ) {
 
@@ -478,7 +479,8 @@ EOF;
 
 // Database options already set?
 if (file_exists('./in.conf.php')) {
-  include ('./in.conf.php');
+  // Include in.db.php, which includes the file we know we have
+  require_once ('./in.db.php');
 }
 
 // Our actual signup page
