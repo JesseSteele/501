@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   echo "<pre>Checks-out 3: $pass_verify_3 ### PHP code: password_verify($pass, $password_hashed_3)</pre>";
   echo "<pre>Checks-out 4: $pass_verify_4 ### PHP code: password_verify($pass, $password_hashed_4)</pre>";
   echo "<pre>Checks-out 5: $pass_verify_5 ### PHP code: password_verify($pass, $password_hashed_5)</pre>";
-  echo "<pre>Checks-out 6: $pass_verify_6 ### PHP code:  password_verify(wrong, $password_hashed_5)</pre>";
+  echo "<pre>Checks-out 6: $pass_verify_6 ### PHP code: password_verify(wrong, $password_hashed_5)</pre>";
 
   echo "<hr><br><br>";
 

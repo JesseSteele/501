@@ -111,11 +111,11 @@ EOF;
     // Add the first admin user
 
     // Check proper user form submission
-    if (
-      (isset($fullname)) && (! array_key_exists('fullname', $check_err))
-      (isset($username)) && (! array_key_exists('username', $check_err))
-      (isset($email)) && (! array_key_exists('email', $check_err))
-      (isset($favnumber)) && (! array_key_exists('favnumber', $check_err))
+   if (
+      (isset($fullname)) && (! array_key_exists('fullname', $check_err)) &&
+      (isset($username)) && (! array_key_exists('username', $check_err)) &&
+      (isset($email)) && (! array_key_exists('email', $check_err)) &&
+      (isset($favnumber)) && (! array_key_exists('favnumber', $check_err)) &&
       (isset($password)) && (! array_key_exists('password', $check_err))
     ) {
 
