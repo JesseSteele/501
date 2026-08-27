@@ -55,7 +55,7 @@ if ( (isset($_POST['edit_piece']))
     $add_num = 0;
     $dup = true;
     // If there were no changes
-    while ($dup = true) {
+    while ($dup) {
       $add_num = $add_num + 1;
       $new_p_slug = $p_slug_test_sqlesc.'-'.$add_num;
 

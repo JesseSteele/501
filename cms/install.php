@@ -263,7 +263,7 @@ EOF;
       `series_cat2` VARCHAR(255) DEFAULT NULL,
       `series_cat3` VARCHAR(255) DEFAULT NULL,
       `series_cat4` VARCHAR(255) DEFAULT NULL,
-      `series_cat5` VARCHAR(255) DEFAULT NULL
+      `series_cat5` VARCHAR(255) DEFAULT NULL,
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4";
     $statement = $database->query($query);

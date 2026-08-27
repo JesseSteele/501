@@ -49,7 +49,7 @@ if (isset($_POST['as_json'])) {
       $add_num = 0;
       $dup = true;
       // If there were no changes
-      while ($dup = true) {
+      while ($dup) {
         $add_num = $add_num + 1;
         $new_p_slug = $p_slug.'-'.$add_num;
         $new_p_slug_test_trim = DB::trimspace($new_p_slug);
@@ -560,7 +560,7 @@ echo '
     </div>
     <div class="col">';
     // Editing a current draft?
-    if (($diff_type == 'p') && ($p_id = "draft_")) {
+    if (($diff_type == 'p') && ($p_id == "draft_")) {
       echo '<code><a class="green" href="'.$blog_web_base.'/edit.php?p='.$piece_id.'">edit current draft</a></code>';
     } elseif ($diff_type == 'as') {
       echo '<code><input form="restore_autosave" type="submit" class="green postform link-button" value="restore this autosave"></code>';

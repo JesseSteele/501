@@ -12,7 +12,7 @@ $pro_rss_name = 'series-rss.jpg';
 $pro_podcast_name = 'series-podcast.jpg';
 
 // Check & validate for what we need
-if ( ($_SERVER['REQUEST_METHOD'] === 'POST') && (!empty($_POST['u_id'])) && (filter_var($_POST['u_id'], FILTER_VALIDATE_INT)) && (isset($_SESSION['user_id'])) && (($_POST['u_id']) == (isset($_SESSION['user_id']))) ) {
+if ( ($_SERVER['REQUEST_METHOD'] === 'POST') && (!empty($_POST['u_id'])) && (filter_var($_POST['u_id'], FILTER_VALIDATE_INT)) && (isset($_SESSION['user_id'])) && (($_POST['u_id']) == ($_SESSION['user_id'])) ) {
 
   // AJAX token check
   if ( $_POST['ajax_token'] !== $_SESSION['ajax_token'] ) {

@@ -238,7 +238,7 @@ foreach ($rows as $row) {
         $add_num = 0;
         $dup = true;
         // If there were no changes
-        while ($dup = true) {
+        while ($dup) {
           $add_num = $add_num + 1;
           $new_f_slug = $f_slug.'-'.$add_num;
           // In case this gets longer than allowed characters

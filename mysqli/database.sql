@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
       `slug` VARCHAR(90) NOT NULL,
       `content` LONGTEXT DEFAULT NULL,
       `after` TINYTEXT DEFAULT NULL,
-      `series` INT UNSIGNED DEFAULT 1
+      `series` INT UNSIGNED DEFAULT 1,
       `date_live` TIMESTAMP NULL,
       `date_created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       `date_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `publications` (
       `slug` VARCHAR(90) NOT NULL,
       `content` LONGTEXT DEFAULT NULL,
       `after` TINYTEXT DEFAULT NULL,
-      `series` INT UNSIGNED DEFAULT 1
+      `series` INT UNSIGNED DEFAULT 1,
       `date_live` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       `date_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (`id`)
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `publication_history` (
       `slug` VARCHAR(90) NOT NULL,
       `content` LONGTEXT DEFAULT NULL,
       `after` TINYTEXT DEFAULT NULL,
-      `series` INT UNSIGNED DEFAULT 1
+      `series` INT UNSIGNED DEFAULT 1,
       `date_live` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       `date_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (`id`)

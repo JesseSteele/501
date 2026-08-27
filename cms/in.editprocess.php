@@ -72,7 +72,7 @@ if ( ($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['piece'])) ) {
     $add_num = 0;
     $dup = true;
     // If there were no changes
-    while ($dup = true) {
+    while ($dup) {
       $add_num = $add_num + 1;
       $new_p_slug = $p_slug.'-'.$add_num;
       // In case this gets longer than allowed characters

@@ -114,8 +114,8 @@ EOF;
       `date_expires` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4";
-    $statement = $database->query($query);
-    if ($statement) {
+    $call = mysqli_query($database, $query);
+    if ($call) {
       $installrun = true;
     } else {
       echo '<p>Could not create the strings database table, quitting.</p>';

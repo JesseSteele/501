@@ -84,7 +84,7 @@ sudo vim /etc/cron.d/webapp
   - Make sure `webappfolder` to the location of your web app (if it differs on your distro)
 
 ```console
-*/15 * * * * root /usr/bin/php /srv/www/html/webappfolder/task.aggregatefetch.php.php
+*/15 * * * * root /usr/bin/php /srv/www/html/webappfolder/task.aggregatefetch.php
 ```
 - Press:
   - <kbd>i</kbd>

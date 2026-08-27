@@ -253,7 +253,7 @@ echo '
     </div>
     <div class="col">';
     // Editing a current draft?
-    if (($diff_type == 'p') && ($p_id = "draft_")) {
+    if (($diff_type == 'p') && ($p_id == "draft_")) {
       echo '<code><a class="green" href="edit.php?p='.$piece_id.'">edit current draft</a></code>
       <pre><h3>'.$p_update.'<br>(latest draft)</h3></pre>';
     } elseif ($diff_type == 'ch') {
